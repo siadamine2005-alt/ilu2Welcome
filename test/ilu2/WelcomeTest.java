@@ -38,16 +38,22 @@ class WelcomeTest {
 	
 	@Test
 	void testIter5() {
-		assertEquals("Hello, Amy, Bob",w.welcome("amy,bob") );
+		assertEquals("Hello, Amy and Bob",w.welcome("amy,bob") );
 	}
 	
 	@Test
 	void testIter6() {
-		assertEquals("Hello, Amy, Bob, Jerry",w.welcome("amy,bob,jerry") );
+		assertEquals("Hello, Amy, Bob and Jerry",w.welcome("amy,bob,jerry") );
 	}
 	
 	@Test
 	void testIter7() {
-		assertEquals("Hello, Amy, Jerry. AND HELLO, BOB !",w.welcome("amy,BOB,jerry") );
+		assertEquals("Hello, Amy and Jerry. AND HELLO, BOB !",w.welcome("amy,BOB,jerry") );
+	}
+	
+	@Test
+	void testIter8() {
+		assertEquals("Hello, Amy, Bob and Jerry",w.welcome("amy,bob,jerry") );
+		assertEquals("Hello, Bob and Jerry. AND HELLO, AMY AND JACK !",w.welcome("bob,AMY,jerry,JACK") );
 	}
 }
