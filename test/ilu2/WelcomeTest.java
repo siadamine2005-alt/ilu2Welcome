@@ -31,4 +31,8 @@ class WelcomeTest {
 		assertEquals("Hello, my friend",w.welcome(null));
 	}
 
+	@Test
+	void testIter4() {
+		assertEquals("Hello, Bob",w.welcome("bob     ") );
+	}
 }

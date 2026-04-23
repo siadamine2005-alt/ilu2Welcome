@@ -4,7 +4,8 @@ public class Welcome {
 	
 	public String welcome(String input) {
 		
-		if( input == null|| input.isBlank() || input.isEmpty()) {
+		input = input.trim();
+		if( input == null|| input.isEmpty()) {
 			return "Hello, my friend";
 		}
 			
