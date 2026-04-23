@@ -21,7 +21,7 @@ class WelcomeTest {
 	
 	@Test
 	void testIter2() {
-		assertEquals("Hello, JERRY !",w.welcome("JERRY") );
+		assertEquals("HELLO, JERRY !",w.welcome("JERRY") );
 	}
 	
 	@Test
@@ -44,5 +44,10 @@ class WelcomeTest {
 	@Test
 	void testIter6() {
 		assertEquals("Hello, Amy, Bob, Jerry",w.welcome("amy,bob,jerry") );
+	}
+	
+	@Test
+	void testIter7() {
+		assertEquals("Hello, Amy, Jerry. AND HELLO, BOB !",w.welcome("amy,BOB,jerry") );
 	}
 }
