@@ -35,4 +35,9 @@ class WelcomeTest {
 	void testIter4() {
 		assertEquals("Hello, Bob",w.welcome("bob     ") );
 	}
+	
+	@Test
+	void testIter5() {
+		assertEquals("Hello, Amy, Bob",w.welcome("amy,bob") );
+	}
 }
