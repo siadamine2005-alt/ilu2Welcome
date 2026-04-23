@@ -15,14 +15,20 @@ class WelcomeTest {
 	}
 
 	@Test
-	void testiter1() {
-		assertEquals("Hello, Bob",w.welcome("bob") );;
+	void testIter1() {
+		assertEquals("Hello, Bob",w.welcome("bob") );
 	}
 	
 	@Test
-	void testiter2() {
-		assertEquals("Hello, JERRY !",w.welcome("JERRY") );;
+	void testIter2() {
+		assertEquals("Hello, JERRY !",w.welcome("JERRY") );
 	}
 	
+	@Test
+	void testIter3() {
+		assertEquals("Hello, my friend",w.welcome("") );
+		assertEquals("Hello, my friend",w.welcome("      ") );
+		assertEquals("Hello, my friend",w.welcome(null));
+	}
 
 }

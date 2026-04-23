@@ -3,6 +3,12 @@ package ilu2;
 public class Welcome {
 	
 	public String welcome(String input) {
+		
+		if( input == null|| input.isBlank() || input.isEmpty()) {
+			return "Hello, my friend";
+		}
+			
+			
 		StringBuilder output = new StringBuilder();
 		output.append("Hello, ");
 		
